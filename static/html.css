@@ -60,6 +60,11 @@ img {
     }
 }
 
+.discord-container {
+    margin-top: 30px;
+    grid-template-columns: auto auto;
+}
+
 .fancy-title-container {
     width: fit-content;
     margin: 0 auto;
