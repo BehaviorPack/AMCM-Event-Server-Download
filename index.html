@@ -217,8 +217,93 @@
         sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
       ></iframe>
     </div>
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">❌</a>
+      <!--  <a href="#">Home</a>
+      <a href="#">Events</a> -->
+      <a href="https://archive.org/details/a-minecraft-movie-event-world-captures">Archive.org</a>
+      <a href="https://discord.com/invite/ARbse5mKZ8">Discord</a>
+    </div>
+
+    <!-- Sidebar toggle button -->
+    <span class="openbtn" onclick="openSidebar()">&#9776; Menu</span>
+
+    <script>
+      const sidebar = document.getElementById("sidebar");
+
+      function openSidebar() {
+        sidebar.style.width = "250px";
+        document.addEventListener("click", handleClickOutside);
+      }
+
+      function closeSidebar() {
+        sidebar.style.width = "0";
+        document.removeEventListener("click", handleClickOutside);
+      }
+
+      function handleClickOutside(e) {
+        if (!sidebar.contains(e.target) && !e.target.classList.contains("openbtn")) {
+          closeSidebar();
+        }
+      }
+    </script>
   </body>
 </html>
 <style>
   @import url("static/html.css");
+  .sidebar {
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background: rgba(17, 17, 17, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.5);
+    overflow-x: hidden;
+    transition: width 0.4s ease;
+    padding-top: 70px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .sidebar a {
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #dddddd;
+    display: block;
+    transition: all 0.2s ease;
+  }
+
+  .sidebar a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    padding-left: 32px;
+  }
+
+  .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #2aa7a7;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  }
 </style>
