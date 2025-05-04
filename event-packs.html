@@ -1,32 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <meta property="og:title" content="AMCM Live Event Archive" />
-    <meta name="description" content="AMCM Live Event Downloadable Archive" />
-    <meta property="og:description" content="AMCM Live Event Downloadable Archive" />
-    <meta property="twitter:description" content="AMCM Live Event Downloadable Archive" />
+    <link rel="icon" href="event-packs.ico" type="image/x-icon" />
+    <meta property="og:title" content="Minecraft Events Archive" />
+    <meta name="description" content="Minecraft Events Downloadable Archive" />
+    <meta property="og:description" content="Minecraft Events Downloadable Archive" />
+    <meta property="twitter:description" content="Minecraft Events Downloadable Archive" />
     <meta property="theme-color" content="#2aa7a7" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:image"
-      content="https://github.com/unlisted-n3s/AMCM-Event-Server-Download/blob/main/static/embed_icon.png?raw=true"
-    />
-    <meta
-      property="og:image"
-      content="https://github.com/unlisted-n3s/AMCM-Event-Server-Download/blob/main/static/embed_icon.png?raw=true"
-    />
+    <meta name="twitter:image" content="static/packs/MN22.png" />
+    <meta property="og:image" content="static/packs/MN22.png" />
     <meta property="og:image:width" content="500" />
     <meta property="og:image:height" content="500" />
     <meta name="keywords" content="Minecraft, Bedrock, Marketplace, Buttons, Pixel Art" />
-    <link rel="canonical" href="https://github.com/unlisted-n3s/AMCM-Event-Server-Download/" />
+    <link rel="canonical" href="https://github.com/unlisted-n3s/AMCM-Event-Server-Download/event-packs.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
-    <title>A Minecraft Movie Live Event Archive</title>
+    <title>Minecraft Events Archive</title>
   </head>
   <body>
     <h1 class="fancy-title-container">
-      <span class="fancy-title">A Minecraft Movie Live Event Archive</span>
+      <span class="fancy-title">Minecraft Events Archive</span>
     </h1>
     <p style="text-align: center; font-size: 18px; color: #cccccc">
       Click on an item to download it. Have a question? Check out
@@ -492,21 +486,8 @@
         ></div>
       </div>
     </div>
-    <div class="discord-container">
-      <iframe
-        src="https://discord.com/widget?id=1359848750691909763&theme=dark"
-        width="350"
-        height="350"
-        allowtransparency="true"
-        frameborder="0"
-        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-      ></iframe>
-    </div>
     <!-- Sidebar -->
     <div id="sidebar" class="sidebar">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">❌</a>
-      <!--  <a href="#">Home</a>
-      <a href="#">Events</a> -->
       <a href="https://archive.org/details/a-minecraft-movie-event-world-captures">Archive.org</a>
       <a href="https://discord.com/invite/ARbse5mKZ8">Discord</a>
       <a href="event-packs.html">Event Packs</a>
@@ -514,27 +495,37 @@
     </div>
 
     <!-- Sidebar toggle button -->
-    <span class="openbtn" onclick="openSidebar()">&#9776; Menu</span>
+    <span class="openbtn" onclick="openSidebar()">&#9776;</span>
 
     <script>
       const sidebar = document.getElementById("sidebar");
+      const toggleButton = document.querySelector(".openbtn");
 
-      function openSidebar() {
-        sidebar.style.width = "250px";
-        document.addEventListener("click", handleClickOutside);
-      }
-
-      function closeSidebar() {
-        sidebar.style.width = "0";
-        document.removeEventListener("click", handleClickOutside);
+      function toggleSidebar() {
+        const isOpen = sidebar.style.width === "250px";
+        if (isOpen) {
+          sidebar.style.width = "0";
+          document.removeEventListener("click", handleClickOutside);
+        } else {
+          sidebar.style.width = "250px";
+          document.addEventListener("click", handleClickOutside);
+        }
       }
 
       function handleClickOutside(e) {
-        if (!sidebar.contains(e.target) && !e.target.classList.contains("openbtn")) {
-          closeSidebar();
+        if (!sidebar.contains(e.target) && !toggleButton.contains(e.target)) {
+          sidebar.style.width = "0";
+          document.removeEventListener("click", handleClickOutside);
         }
       }
+
+      toggleButton.addEventListener("click", toggleSidebar);
     </script>
+
+    <a href="https://discord.gg/yourinvite" class="discord-float-button" target="_blank">
+      <img src="static/packs/eerie_badge.gif" alt="Discord Event" />
+      <span>DISCORD</span>
+    </a>
   </body>
 </html>
 <style>
@@ -583,7 +574,6 @@
   .openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color: #2aa7a7;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -592,6 +582,7 @@
     left: 20px;
     z-index: 1001;
     border-radius: 6px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 8px rgb(0 0 0);
+    background-color: rgba(255, 255, 255, 0.1);
   }
 </style>
