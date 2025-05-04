@@ -36,7 +36,8 @@ body {
     transform: scale(1.1);
 }
 
-img {
+
+.map-thumbnail {
     max-width: 100%;
     max-height: 100%;
     border-radius: 2% 2% 0px 0px;
@@ -87,3 +88,38 @@ a {
 a:hover {
     color: #fff
 }
+
+.discord-float-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1001;
+    background-color: #5865F2;
+    color: #fff;
+    padding: 12px 16px; /* slightly larger padding */
+    border-radius: 10px;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s, background-color 0.2s;
+  }
+  
+  .discord-float-button:hover {
+    background-color: #4752c4;
+    transform: scale(1.08); /* modest hover scale */
+  }
+  
+  .discord-float-button img {
+    width: 60px;  /* slightly larger */
+    height: 60px;
+    object-fit: contain;
+    position: absolute;
+    bottom: 100%;
+    left: 20px;
+  }
+  
+  .discord-float-button span {
+    font-weight: bold;
+    font-size: 15px; /* slightly larger text */
+    margin-top: 68px;  /* adjusted to match new image size */
+  }
