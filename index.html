@@ -189,6 +189,26 @@
         </div>
       </a>
     </div>
+
+    <button
+      onclick="document.getElementById('changelogModal').style.display='flex'"
+      style="
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        font-size: 20px;
+        cursor: pointer;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 6px;
+        box-shadow: 0 0 8px rgb(0 0 0);
+        background-color: rgba(255, 255, 255, 0.1);
+      "
+    >
+      📜
+    </button>
+
     <!-- Sidebar -->
     <div id="sidebar" class="sidebar">
       <a href="https://archive.org/details/a-minecraft-movie-event-world-captures"
@@ -208,7 +228,6 @@
     </div>
 
     <!-- Sidebar toggle button -->
-    <!-- HTML -->
     <div class="menu-container">
       <span class="openbtn openbtn-mobile">☰</span>
       <span class="openbtn openbtn-desktop">☰ Menu</span>
@@ -265,6 +284,38 @@
       <img src="static/icons/Movie_Badge.gif" alt="Discord Event" />
       <span>DISCORD</span>
     </a>
+
+    <!-- Changelog Modal -->
+    <div
+      id="changelogModal"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 1002;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <div
+        style="background: #222; color: white; padding: 20px; border-radius: 10px; max-width: 500px; text-align: left"
+      >
+        <h2>Changelog</h2>
+        <ul>
+          <li>Fixed Midport Village World Download.</li>
+        </ul>
+        <button
+          onclick="document.getElementById('changelogModal').style.display='none'"
+          style="margin-top: 10px; padding: 8px 12px; background: #444; color: #fff; border: none; border-radius: 5px"
+        >
+          Close
+        </button>
+      </div>
+    </div>
   </body>
 </html>
 
