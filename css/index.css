@@ -1,0 +1,207 @@
+@font-face {
+        font-family: "Minecraft";
+        src: url("https://raw.githubusercontent.com/Minato-mba/Minato-mba.github.io/maiBy ssets/fonts/minecraft.otf")
+          format("opentype");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Minecraft";
+        src: url("https://raw.githubusercontent.com/Minato-mba/Minato-mba.github.io/maiBy ssets/fonts/minecraft-ten.ttf")
+          format("truetype");
+        font-weight: bold;
+        font-style: normal;
+      }
+
+      body {
+        margin: 0;
+        background-color: #1b1b1b;
+        color: white;
+        font-family: "Minecraft", sans-serif;
+        image-rendering: pixelated;
+      }
+
+      .top-bar {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        border-bottom: 4px solid #444;
+        background-color: #2d2d2d;
+      }
+
+      .top-bar .logo {
+        font-size: 20px;
+        color: #fff;
+        text-shadow: 2px 2px #000;
+      }
+
+      .discord-button {
+        font-family: "Minecraft", sans-serif;
+        background-color: #7289da;
+        color: #fff;
+        border: 3px solid #5865f2;
+        padding: 6px 12px;
+        text-decoration: none;
+        cursor: pointer;
+        box-shadow: 2px 2px #000;
+        transition: transform 0.05s, box-shadow 0.05s;
+        display: inline-block;
+      }
+
+      .discord-button:hover {
+        background-color: #6772f4;
+      }
+
+      .discord-button:active {
+        transform: translate(2px, 2px);
+        box-shadow: 0px 0px #000;
+      }
+
+      .bottom-bar {
+        background-color: #2d2d2d;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        border-top: 4px solid #444;
+        flex-wrap: wrap; /* keep wrap on desktop */
+      }
+
+      .disclaimer {
+        color: #b0b0b0;
+      }
+
+      @media (max-width: 600px) {
+        .bottom-bar {
+          flex-wrap: nowrap; /* prevent wrapping on mobile */
+        }
+
+        .bottom-buttons {
+          max-width: 45%; /* take less than half to allow space */
+        }
+
+        .disclaimer {
+          font-size: 12px;
+          text-align: right;
+          max-width: 50%;
+          color: #b0b0b0;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .title {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 100%;
+          text-align: right;
+          left: 65%;
+          font-size: 14px; /* or even 12px if needed */
+        }
+
+        .menu-button {
+          text-align: left;
+        }
+      }
+
+      .title {
+        font-weight: bold;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 24px;
+        color: #ffffff;
+      }
+
+      .menu-button {
+        font-family: "Minecraft", sans-serif;
+        background-color: #555;
+        color: #fff;
+        border: 3px solid #888;
+        padding: 5px 10px;
+        cursor: pointer;
+        box-shadow: 2px 2px #000;
+        transition: transform 0.05s, box-shadow 0.05s;
+      }
+
+      .menu-button:hover {
+        background-color: #666;
+      }
+
+      .menu-button:active {
+        transform: translate(2px, 2px);
+        box-shadow: 0px 0px #000;
+      }
+
+      @media (max-width: 600px) {
+        .menu-label {
+          display: none; /* hide "Menu" text on small screens */
+        }
+      }
+
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
+      .page-wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      .content {
+        flex: 1; /* Fills remaining space */
+        padding: 20px;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); /* Exactly 5 per row */
+        gap: 15px;
+      }
+      @media (max-width: 800px) {
+        .grid-container {
+          grid-template-columns: repeat(2, 1fr); /* 2 per row on small screens */
+        }
+      }
+
+      @media (max-width: 500px) {
+        .grid-container {
+          grid-template-columns: 1fr; /* 1 per row on very small screens */
+        }
+      }
+
+      .grid-item {
+        background-color: #2e2e2e;
+        border: 3px solid #444;
+        padding: 10px;
+        text-align: center;
+        transition: transform 0.1s;
+      }
+
+      .grid-item:hover {
+        transform: scale(1.03);
+        border-color: #777;
+      }
+
+      .map-thumbnail {
+        width: 80%;
+        height: auto;
+        margin-bottom: 8px;
+        border: 2px solid #666;
+      }
+
+      .map-name {
+        margin-top: 4px;
+        font-size: 14px;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
