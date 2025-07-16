@@ -9,23 +9,58 @@
 
 <url>
   <loc>https://behaviorpack.github.io/AMCM-Event-Server-Download/</loc>
-  <lastmod>2025-05-05T10:33:23+00:00</lastmod>
+  <lastmod>2025-07-16T00:13:13+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://behaviorpack.github.io/AMCM-Event-Server-Download/event-packs.html</loc>
-  <lastmod>2025-05-05T10:33:23+00:00</lastmod>
+  <loc>https://behaviorpack.github.io/AMCM-Event-Server-Download/CTF.html</loc>
+  <lastmod>2025-07-16T00:13:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://behaviorpack.github.io/AMCM-Event-Server-Download/index.html</loc>
-  <lastmod>2025-05-05T10:33:23+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://behaviorpack.github.io/AMCM-Event-Server-Download/AMCMLE.html</loc>
+  <lastmod>2025-07-16T00:13:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://behaviorpack.github.io/AMCM-Event-Server-Download/mcc.html</loc>
-  <lastmod>2025-05-05T10:33:23+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://behaviorpack.github.io/AMCM-Event-Server-Download/EMOFP.html</loc>
+  <lastmod>2025-07-16T00:13:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://behaviorpack.github.io/AMCM-Event-Server-Download/MCC.html</loc>
+  <lastmod>2025-07-16T00:13:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://behaviorpack.github.io/AMCM-Event-Server-Download/USE.html</loc>
+  <lastmod>2025-07-16T00:13:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://behaviorpack.github.io/AMCM-Event-Server-Download/MV23.html</loc>
+  <lastmod>2025-07-16T00:13:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://behaviorpack.github.io/AMCM-Event-Server-Download/TTE.html</loc>
+  <lastmod>2025-07-16T00:13:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://behaviorpack.github.io/AMCM-Event-Server-Download/MCLLE.html</loc>
+  <lastmod>2025-07-16T00:13:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://behaviorpack.github.io/AMCM-Event-Server-Download/MCL22.html</loc>
+  <lastmod>2025-07-16T00:13:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://behaviorpack.github.io/AMCM-Event-Server-Download/MCN22.html</loc>
+  <lastmod>2025-07-16T00:13:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 
 
