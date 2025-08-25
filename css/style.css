@@ -1,7 +1,7 @@
 
       @font-face {
         font-family: "Minecraft";
-        src: url("https://raw.githubusercontent.com/Minato-mba/Minato-mba.github.io/maiBy ssets/fonts/minecraft.otf")
+        src: url("https://raw.githubusercontent.com/Minato-mba/Minato-mba.github.io/main/assets/fonts/minecraft.otf")
           format("opentype");
         font-weight: normal;
         font-style: normal;
@@ -9,7 +9,7 @@
 
       @font-face {
         font-family: "Minecraft";
-        src: url("https://raw.githubusercontent.com/Minato-mba/Minato-mba.github.io/maiBy ssets/fonts/minecraft-ten.ttf")
+        src: url("https://raw.githubusercontent.com/Minato-mba/Minato-mba.github.io/main/assets/fonts/minecraft-ten.ttf")
           format("truetype");
         font-weight: bold;
         font-style: normal;
@@ -261,4 +261,5 @@
       a {
         color: inherit;
         text-decoration: none;
+
       }
