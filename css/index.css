@@ -1,208 +1,306 @@
 @font-face {
-        font-family: "Minecraft";
-        src: url("https://raw.githubusercontent.com/Minato-mba/Minato-mba.github.io/main/assets/fonts/minecraft.otf")
-          format("opentype");
-        font-weight: normal;
-        font-style: normal;
-      }
+  font-family: "Minecraft";
+  src: url("https://raw.githubusercontent.com/Minato-mba/Minato-mba.github.io/main/assets/fonts/minecraft.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 
-      @font-face {
-        font-family: "Minecraft";
-        src: url("https://raw.githubusercontent.com/Minato-mba/Minato-mba.github.io/main/assets/fonts/minecraft-ten.ttf")
-          format("truetype");
-        font-weight: bold;
-        font-style: normal;
-      }
+@font-face {
+  font-family: "Minecraft";
+  src: url("https://raw.githubusercontent.com/Minato-mba/Minato-mba.github.io/main/assets/fonts/minecraft-ten.ttf")
+    format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
 
-      body {
-        margin: 0;
-        background-color: #1b1b1b;
-        color: white;
-        font-family: "Minecraft", sans-serif;
-        image-rendering: pixelated;
-      }
+body {
+  margin: 0;
+  background-color: #1b1b1b;
+  color: white;
+  font-family: "Minecraft", sans-serif;
+  image-rendering: pixelated;
+}
 
-      .top-bar {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-        border-bottom: 4px solid #444;
-        background-color: #2d2d2d;
-      }
+.top-bar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 4px solid #444;
+  background-color: #2d2d2d;
+}
 
-      .top-bar .logo {
-        font-size: 20px;
-        color: #fff;
-        text-shadow: 2px 2px #000;
-      }
+.top-bar .logo {
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 2px 2px #000;
+}
 
-      .discord-button {
-        font-family: "Minecraft", sans-serif;
-        background-color: #7289da;
-        color: #fff;
-        border: 3px solid #5865f2;
-        padding: 6px 12px;
-        text-decoration: none;
-        cursor: pointer;
-        box-shadow: 2px 2px #000;
-        transition: transform 0.05s, box-shadow 0.05s;
-        display: inline-block;
-      }
+.discord-button {
+  font-family: "Minecraft", sans-serif;
+  background-color: #7289da;
+  color: #fff;
+  border: 3px solid #5865f2;
+  padding: 6px 12px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 2px 2px #000;
+  transition: transform 0.05s, box-shadow 0.05s;
+  display: inline-block;
+}
 
-      .discord-button:hover {
-        background-color: #6772f4;
-      }
+.discord-button:hover {
+  background-color: #6772f4;
+}
 
-      .discord-button:active {
-        transform: translate(2px, 2px);
-        box-shadow: 0px 0px #000;
-      }
+.discord-button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px #000;
+}
 
-      .bottom-bar {
-        background-color: #2d2d2d;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-        border-top: 4px solid #444;
-        flex-wrap: wrap; /* keep wrap on desktop */
-      }
+.bottom-bar {
+  background-color: #2d2d2d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-top: 4px solid #444;
+  flex-wrap: wrap;
+}
 
-      .disclaimer {
-        color: #b0b0b0;
-      }
+.disclaimer {
+  color: #b0b0b0;
+}
 
-      @media (max-width: 600px) {
-        .bottom-bar {
-          flex-wrap: nowrap; /* prevent wrapping on mobile */
-        }
+@media (max-width: 600px) {
+  .bottom-bar {
+    flex-wrap: nowrap;
+  }
 
-        .bottom-buttons {
-          max-width: 45%; /* take less than half to allow space */
-        }
+  .bottom-buttons {
+    max-width: 45%;
+  }
 
-        .disclaimer {
-          font-size: 12px;
-          text-align: right;
-          max-width: 50%;
-          color: #b0b0b0;
-        }
-      }
+  .disclaimer {
+    font-size: 12px;
+    text-align: right;
+    max-width: 50%;
+    color: #b0b0b0;
+  }
+}
 
-      @media (max-width: 600px) {
-        .title {
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          max-width: 100%;
-          text-align: right;
-          left: 65%;
-          font-size: 14px; /* or even 12px if needed */
-        }
+@media (max-width: 600px) {
+  .title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    text-align: right;
+    left: 65%;
+    font-size: 14px;
+  }
 
-        .menu-button {
-          text-align: left;
-        }
-      }
+  .menu-button {
+    text-align: left;
+  }
+}
 
-      .title {
-        font-weight: bold;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 24px;
-        color: #ffffff;
-      }
+.title {
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  color: #ffffff;
+}
 
-      .menu-button {
-        font-family: "Minecraft", sans-serif;
-        background-color: #555;
-        color: #fff;
-        border: 3px solid #888;
-        padding: 5px 10px;
-        cursor: pointer;
-        box-shadow: 2px 2px #000;
-        transition: transform 0.05s, box-shadow 0.05s;
-      }
+.menu-button {
+  font-family: "Minecraft", sans-serif;
+  background-color: #555;
+  color: #fff;
+  border: 3px solid #888;
+  padding: 5px 10px;
+  cursor: pointer;
+  box-shadow: 2px 2px #000;
+  transition: transform 0.05s, box-shadow 0.05s;
+}
 
-      .menu-button:hover {
-        background-color: #666;
-      }
+.menu-button:hover {
+  background-color: #666;
+}
 
-      .menu-button:active {
-        transform: translate(2px, 2px);
-        box-shadow: 0px 0px #000;
-      }
+.menu-button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px #000;
+}
 
-      @media (max-width: 600px) {
-        .menu-label {
-          display: none; /* hide "Menu" text on small screens */
-        }
-      }
+@media (max-width: 600px) {
+  .menu-label {
+    display: none;
+  }
+}
 
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-      }
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
 
-      .page-wrapper {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-      }
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-      .content {
-        flex: 1; /* Fills remaining space */
-        padding: 20px;
-      }
+.content {
+  flex: 1;
+  padding: 20px;
+}
 
-      .grid-container {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr); /* Exactly 5 per row */
-        gap: 15px;
-      }
-      @media (max-width: 800px) {
-        .grid-container {
-          grid-template-columns: repeat(2, 1fr); /* 2 per row on small screens */
-        }
-      }
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
 
-      @media (max-width: 500px) {
-        .grid-container {
-          grid-template-columns: 1fr; /* 1 per row on very small screens */
-        }
-      }
+@media (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
-      .grid-item {
-        background-color: #2e2e2e;
-        border: 3px solid #444;
-        padding: 10px;
-        text-align: center;
-        transition: transform 0.1s;
-      }
+@media (max-width: 500px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
 
-      .grid-item:hover {
-        transform: scale(1.03);
-        border-color: #777;
-      }
+.grid-item {
+  background-color: #2e2e2e;
+  border: 3px solid #444;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.1s;
+}
 
-      .map-thumbnail {
-        width: 80%;
-        height: auto;
-        margin-bottom: 8px;
-        border: 2px solid #666;
-      }
+.grid-item:hover {
+  transform: scale(1.03);
+  border-color: #777;
+}
 
-      .map-name {
-        margin-top: 4px;
-        font-size: 14px;
-      }
+.map-thumbnail {
+  width: 80%;
+  height: auto;
+  margin-bottom: 8px;
+  border: 2px solid #666;
+}
 
-      a {
-        color: inherit;
-        text-decoration: none;
+.map-name {
+  margin-top: 4px;
+  font-size: 14px;
+}
 
-      }
+.world-section {
+  background-color: #2e2e2e;
+  border: 3px solid #444;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+.top-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.keyart {
+  flex: 1 1 300px;
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #666;
+  object-fit: cover;
+}
+
+.world-info {
+  flex: 2 1 400px;
+  color: #ccc;
+}
+
+.world-info h2 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #fff;
+}
+
+.world-description {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.download-button {
+  font-family: "Minecraft", sans-serif;
+  background-color: #3a9c3a;
+  color: #fff;
+  border: 3px solid #2c7a2c;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  box-shadow: 2px 2px #000;
+  transition: transform 0.05s, box-shadow 0.05s;
+}
+
+.download-button:hover {
+  background-color: #45b045;
+}
+
+.download-button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px #000;
+}
+
+.wiki-button {
+  background-color: #3498db;
+  border-color: #2980b9;
+}
+
+.wiki-button:hover {
+  background-color: #3da8f5;
+}
+
+.archive-button {
+  background-color: #1abc9c;
+  border-color: #16a085;
+}
+
+.archive-button:hover {
+  background-color: #2ee2bd;
+}
+
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 15px;
+}
+
+.screenshot-card {
+  background-color: #1f1f1f;
+  padding: 10px;
+  border: 2px solid #444;
+  text-align: center;
+}
+
+.screenshot {
+  width: 100%;
+  border: 2px solid #555;
+  image-rendering: pixelated;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
