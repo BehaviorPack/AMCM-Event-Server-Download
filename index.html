@@ -1,140 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="Wtj6zh-oEeYpTUiTC_h-AhU2DPJu8-FoAQ5UI6y1JKc" />
-    <link rel="icon" href="./images/packs/AMMLE.png" type="image/png" />
-    <title>Event Server Archive</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="Wtj6zh-oEeYpTUiTC_h-AhU2DPJu8-FoAQ5UI6y1JKc">
+  <title>Event Server Archive - Download Minecraft Bedrock Event Servers</title>
+  <meta name="description" content="Download Minecraft Bedrock live event servers: resource packs and world captures of Mojang's official event servers, archived so anyone can play them offline.">
+  <link rel="canonical" href="https://archive.mceventrecreations.net/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="icon" href="images/packs/AMMLE.png" type="image/png">
+  <meta name="theme-color" content="#2d2d2d">
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="AMCM Live Event Archive" />
-    <meta property="og:description" content="AMCM Live Event Downloadable Archive" />
-    <meta property="og:image" content="./images/embed_icon.png" />
-    <meta property="og:image:width" content="500" />
-    <meta property="og:image:height" content="500" />
-    <link rel="canonical" href="https://archive.mceventrecreations.net" />
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Event Server Archive">
+  <meta property="og:title" content="Event Server Archive - Download Minecraft Bedrock Event Servers">
+  <meta property="og:description" content="Download Minecraft Bedrock live event servers: resource packs and world captures of Mojang's official event servers, archived so anyone can play them offline.">
+  <meta property="og:url" content="https://archive.mceventrecreations.net/">
+  <meta property="og:image" content="https://archive.mceventrecreations.net/images/embed_icon.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Event Server Archive - Download Minecraft Bedrock Event Servers">
+  <meta name="twitter:description" content="Download Minecraft Bedrock live event servers: resource packs and world captures of Mojang's official event servers, archived so anyone can play them offline.">
+  <meta name="twitter:image" content="https://archive.mceventrecreations.net/images/embed_icon.png">
 
-    <!-- Twitter Meta Tags -->
-    <meta name="description" content="AMCM Live Event Downloadable Archive" />
-    <meta property="twitter:description" content="AMCM Live Event Downloadable Archive" />
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="./images/embed_icon.png" />
-
-    <meta property="theme-color" content="#2aa7a7" />
-    <meta name="keywords" content="Minecraft, Bedrock, Marketplace, Buttons, Pixel Art" />
-
-    <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="./css/index.css" />
+  <link rel="preconnect" href="https://minecraft.wiki">
+  <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin>
+  <link rel="stylesheet" href="css/index.css">
+  <script src="js/site.js" defer></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Event Server Archive","url":"https://archive.mceventrecreations.net/","description":"Download Minecraft Bedrock live event servers: resource packs and world captures of Mojang's official event servers, archived so anyone can play them offline."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Archived Minecraft Bedrock event servers","itemListElement":[{"@type":"ListItem","position":1,"url":"https://archive.mceventrecreations.net/MMVE","name":"Minecraft Movie Voting Event"},{"@type":"ListItem","position":2,"url":"https://archive.mceventrecreations.net/CTF","name":"Capture the Flag"},{"@type":"ListItem","position":3,"url":"https://archive.mceventrecreations.net/AMCMLE","name":"A Minecraft Movie Live Event"},{"@type":"ListItem","position":4,"url":"https://archive.mceventrecreations.net/EMOP","name":"Eerie Mojang Office Party"},{"@type":"ListItem","position":5,"url":"https://archive.mceventrecreations.net/MCC","name":"MCC x Minecraft 15th Anniversary Party"},{"@type":"ListItem","position":6,"url":"https://archive.mceventrecreations.net/USE","name":"Universal Studios Event"},{"@type":"ListItem","position":7,"url":"https://archive.mceventrecreations.net/MV23","name":"Mob Vote 2023"},{"@type":"ListItem","position":8,"url":"https://archive.mceventrecreations.net/TTE","name":"Trails & Tales Event"},{"@type":"ListItem","position":9,"url":"https://archive.mceventrecreations.net/MCLLE","name":"Minecraft Legends Live Event"},{"@type":"ListItem","position":10,"url":"https://archive.mceventrecreations.net/MCL22","name":"Minecraft Live 2022"},{"@type":"ListItem","position":11,"url":"https://archive.mceventrecreations.net/MCN22","name":"Minecraft Now 2022"}]}</script>
 </head>
 <body>
-    <div class="page-wrapper">
-        <div class="top-bar">
-            <div class="title">Event Server Archive</div>
-            <div class="top-buttons">
-                <button class="menu-button">☰ <span class="menu-label">Menu</span></button>
-            </div>
-        </div>
+  <div class="page-wrapper">
+    <header class="top-bar">
+      <h1 class="title">Event Server Archive</h1>
+      <div class="top-buttons">
+        <button class="menu-button" id="menu-button" aria-expanded="false" aria-controls="menu-panel">☰ <span class="menu-label">Menu</span></button>
+      </div>
+      <nav class="menu-panel" id="menu-panel" aria-label="Events" hidden>
+        <a href="MMVE">Minecraft Movie Voting Event</a>
+        <a href="CTF">Capture the Flag</a>
+        <a href="AMCMLE">A Minecraft Movie Live Event</a>
+        <a href="EMOP">Eerie Mojang Office Party</a>
+        <a href="MCC">MCC x Minecraft 15th Anniversary Party</a>
+        <a href="USE">Universal Studios Event</a>
+        <a href="MV23">Mob Vote 2023</a>
+        <a href="TTE">Trails &amp; Tales Event</a>
+        <a href="MCLLE">Minecraft Legends Live Event</a>
+        <a href="MCL22">Minecraft Live 2022</a>
+        <a href="MCN22">Minecraft Now 2022</a>
+        <a href="tools" class="menu-divider">Tools</a>
+      </nav>
+    </header>
 
-        <div class="content">
-            <div class="grid-container">
-                <a href="CTF">
-                    <div class="grid-item">
-                        <img src="images/packs/CTF.png" class="map-thumbnail" alt="Capture the Flag" />
-                        <div class="map-name"><strong>Capture the Flag</strong></div>
-                        <div class="map-name">By Mojang Studios</div>
-                    </div>
-                </a>
+    <main class="content">
+      <div class="grid-container">
+        <a href="MMVE">
+          <div class="grid-item">
+            <img src="https://minecraft.wiki/images/AMCM_Voting_Icon.png?6de0d" class="map-thumbnail" alt="Minecraft Movie Voting Event icon" width="128" height="128">
+            <div class="map-name"><strong>Minecraft Movie Voting Event</strong></div>
+            <div class="map-name">By Noxcrew</div>
+          </div>
+        </a>
 
-                <a href="AMCMLE">
-                    <div class="grid-item">
-                        <img src="images/packs/AMMLE.png" class="map-thumbnail" alt="A Minecraft Movie Live Event" />
-                        <div class="map-name"><strong>A Minecraft Movie Live Event</strong></div>
-                        <div class="map-name">By Spark Universe</div>
-                    </div>
-                </a>
+        <a href="CTF">
+          <div class="grid-item">
+            <img src="images/packs/CTF.png" class="map-thumbnail" alt="Capture the Flag icon" width="128" height="128">
+            <div class="map-name"><strong>Capture the Flag</strong></div>
+            <div class="map-name">By Mojang Studios</div>
+          </div>
+        </a>
 
-                <a href="EMOP">
-                    <div class="grid-item">
-                        <img src="images/packs/EMOP.png" class="map-thumbnail" alt="Eerie Mojang Office Party" />
-                        <div class="map-name"><strong>Eerie Mojang Office Party</strong></div>
-                        <div class="map-name">By Blockworks</div>
-                    </div>
-                </a>
+        <a href="AMCMLE">
+          <div class="grid-item">
+            <img src="images/packs/AMMLE.png" class="map-thumbnail" alt="A Minecraft Movie Live Event icon" width="128" height="128">
+            <div class="map-name"><strong>A Minecraft Movie Live Event</strong></div>
+            <div class="map-name">By Spark Universe</div>
+          </div>
+        </a>
 
-                <a href="MCC">
-                    <div class="grid-item">
-                        <img src="images/packs/MCC.png" class="map-thumbnail" alt="MCC x Minecraft 15th Anniversary Party" />
-                        <div class="map-name"><strong>MCC x Minecraft 15th Anniversary Party</strong></div>
-                        <div class="map-name">By Noxcrew</div>
-                    </div>
-                </a>
+        <a href="EMOP">
+          <div class="grid-item">
+            <img src="images/packs/EMOP.png" class="map-thumbnail" alt="Eerie Mojang Office Party icon" width="128" height="128">
+            <div class="map-name"><strong>Eerie Mojang Office Party</strong></div>
+            <div class="map-name">By Blockworks</div>
+          </div>
+        </a>
 
-                <a href="USE">
-                    <div class="grid-item">
-                        <img src="images/packs/USE.png" class="map-thumbnail" alt="Universal Studios Event" />
-                        <div class="map-name"><strong>Universal Studios Event</strong></div>
-                        <div class="map-name">By Hive Games</div>
-                    </div>
-                </a>
+        <a href="MCC">
+          <div class="grid-item">
+            <img src="images/packs/MCC.png" class="map-thumbnail" alt="MCC x Minecraft 15th Anniversary Party icon" width="128" height="128">
+            <div class="map-name"><strong>MCC x Minecraft 15th Anniversary Party</strong></div>
+            <div class="map-name">By Noxcrew</div>
+          </div>
+        </a>
 
-                <a href="MV23">
-                    <div class="grid-item">
-                        <img src="images/packs/MV23.png" class="map-thumbnail" alt="Mob Vote 2023" />
-                        <div class="map-name"><strong>Mob Vote 2023</strong></div>
-                        <div class="map-name">By Gamemode One</div>
-                    </div>
-                </a>
+        <a href="USE">
+          <div class="grid-item">
+            <img src="images/packs/USE.png" class="map-thumbnail" alt="Universal Studios Event icon" width="128" height="128">
+            <div class="map-name"><strong>Universal Studios Event</strong></div>
+            <div class="map-name">By Hive Games</div>
+          </div>
+        </a>
 
-                <a href="TTE">
-                    <div class="grid-item">
-                        <img src="images/packs/T&TE.png" class="map-thumbnail" alt="Trails & Tales Event" />
-                        <div class="map-name"><strong>Trails & Tales Event</strong></div>
-                        <div class="map-name">By Hive Games</div>
-                        <div id="Wilderness.Update.mcworld" style="font-size: 12px; color: #898989; margin-top: 4px"></div>
-                    </div>
-                </a>
+        <a href="MV23">
+          <div class="grid-item">
+            <img src="images/packs/MV23.png" class="map-thumbnail" alt="Mob Vote 2023 icon" width="128" height="128">
+            <div class="map-name"><strong>Mob Vote 2023</strong></div>
+            <div class="map-name">By Gamemode One</div>
+          </div>
+        </a>
 
-                <a href="MCLLE">
-                    <div class="grid-item">
-                        <img src="images/packs/MLLE.png" class="map-thumbnail" alt="Minecraft Legends Live Event" />
-                        <div class="map-name"><strong>Minecraft Legends Live Event</strong></div>
-                        <div class="map-name">By Gamemode One</div>
-                        <div id="Mines.Update.mcworld" style="font-size: 12px; color: #898989; margin-top: 4px"></div>
-                    </div>
-                </a>
+        <a href="TTE">
+          <div class="grid-item">
+            <img src="images/packs/T&amp;TE.png" class="map-thumbnail" alt="Trails &amp; Tales Event icon" width="128" height="128">
+            <div class="map-name"><strong>Trails &amp; Tales Event</strong></div>
+            <div class="map-name">By Hive Games</div>
+          </div>
+        </a>
 
-                <a href="MCL22">
-                    <div class="grid-item">
-                        <img src="images/packs/ML22.png" class="map-thumbnail" alt="Minecraft Live 2022" />
-                        <div class="map-name"><strong>Minecraft Live 2022</strong></div>
-                        <div class="map-name">By Gamemode One</div>
-                        <div id="Outer.Walls.Old.mcworld" style="font-size: 12px; color: #898989; margin-top: 4px"></div>
-                    </div>
-                </a>
+        <a href="MCLLE">
+          <div class="grid-item">
+            <img src="images/packs/MLLE.png" class="map-thumbnail" alt="Minecraft Legends Live Event icon" width="128" height="128">
+            <div class="map-name"><strong>Minecraft Legends Live Event</strong></div>
+            <div class="map-name">By Gamemode One</div>
+          </div>
+        </a>
 
-                <a href="./MCN22">
-                    <div class="grid-item">
-                        <img src="images/packs/MN22.png" class="map-thumbnail" alt="Minecraft Now 2022" />
-                        <div class="map-name"><strong>Minecraft Now 2022</strong></div>
-                        <div class="map-name">By Mojang Studios</div>
-                        <div id="Outer.Walls.Update.mcworld" style="font-size: 12px; color: #898989; margin-top: 4px"></div>
-                    </div>
-                </a>
-            </div>
-        </div>
+        <a href="MCL22">
+          <div class="grid-item">
+            <img src="images/packs/ML22.png" class="map-thumbnail" alt="Minecraft Live 2022 icon" width="128" height="128">
+            <div class="map-name"><strong>Minecraft Live 2022</strong></div>
+            <div class="map-name">By Gamemode One</div>
+          </div>
+        </a>
 
-        <div class="credit">- Thanks to ThatJadon 26 for the domain.</div>
+        <a href="MCN22">
+          <div class="grid-item">
+            <img src="images/packs/MN22.png" class="map-thumbnail" alt="Minecraft Now 2022 icon" width="128" height="128">
+            <div class="map-name"><strong>Minecraft Now 2022</strong></div>
+            <div class="map-name">By Mojang Studios</div>
+          </div>
+        </a>
+      </div>
+    </main>
 
-        <div class="bottom-bar">
-            <div class="bottom-buttons">
-                <a href="https://discord.gg/ARbse5mKZ8" class="discord-button" target="_blank">Discord</a>
-            </div>
-            <div class="disclaimer">
-                Event Server Archive is not associated with Microsoft Corporation or Mojang AB. Mojang and Minecraft are trademarks of Mojang AB.
-            </div>
-        </div>
-    </div>
+    <div class="credit">- Thanks to ThatJadon 26 for the domain.</div>
+
+    <footer class="bottom-bar">
+      <div class="bottom-buttons">
+        <a href="https://discord.gg/xMrjxHXuUm" class="discord-button" target="_blank" rel="noopener">Discord</a>
+        <a href="tools" class="discord-button tools-button">Tools</a>
+      </div>
+      <div class="disclaimer">
+        Event Server Archive is not associated with Microsoft Corporation or Mojang AB. Mojang and Minecraft are trademarks of Mojang AB.
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
-

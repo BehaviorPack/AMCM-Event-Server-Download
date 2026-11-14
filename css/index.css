@@ -114,10 +114,14 @@ body {
   transform: translateX(-50%);
   font-size: 24px;
   color: #ffffff;
+  margin: 0; /* the home page uses an h1 here */
 }
 
 .menu-button {
+  display: inline-block; /* the Home link on event pages renders like the button */
   font-family: "Minecraft", sans-serif;
+  font-size: 13.33px;
+  line-height: normal;
   background-color: #555;
   color: #fff;
   border: 3px solid #888;
@@ -192,6 +196,8 @@ body {
 
 .map-thumbnail {
   width: 80%;
+  max-width: 180px; /* keeps icons from ballooning in the one-column phone layout */
+  aspect-ratio: 1;
   height: auto;
   margin-bottom: 8px;
   border: 2px solid #666;
@@ -202,12 +208,38 @@ body {
   font-size: 14px;
 }
 
+.menu-panel {
+  position: absolute;
+  top: 100%;
+  left: 20px;
+  z-index: 10;
+  margin-top: 4px;
+  min-width: 260px;
+  max-width: calc(100vw - 40px);
+  max-height: 70vh;
+  overflow-y: auto;
+  background-color: #2d2d2d;
+  border: 3px solid #444;
+  box-shadow: 2px 2px #000;
+}
+
+.menu-panel a {
+  display: block;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.menu-panel a:hover,
+.menu-panel a:focus-visible,
+.menu-panel a[aria-current="page"] {
+  background-color: #444;
+}
+
 .world-section {
   background-color: #2e2e2e;
   border: 3px solid #444;
   padding: 20px;
   margin-bottom: 30px;
-  border-radius: 10px;
 }
 
 .top-row {
@@ -219,6 +251,8 @@ body {
 
 .keyart {
   flex: 1 1 300px;
+  min-width: 0; /* lets large images shrink beside the info instead of filling the row */
+  align-self: flex-start;
   max-width: 100%;
   height: auto;
   border: 2px solid #666;
@@ -230,6 +264,7 @@ body {
   color: #ccc;
 }
 
+.world-info h1,
 .world-info h2 {
   margin-top: 0;
   font-size: 24px;
@@ -283,24 +318,232 @@ body {
 
 .screenshot-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 15px;
 }
 
+/* Download card: same-size image frame, name, then a full-width button pinned to the bottom */
 .screenshot-card {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 10px;
   background-color: #1f1f1f;
   padding: 10px;
   border: 2px solid #444;
   text-align: center;
 }
 
-.screenshot {
-  width: 100%;
+.shot-frame {
+  aspect-ratio: 16 / 9;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #141414;
   border: 2px solid #555;
+}
+
+.screenshot {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  object-fit: cover;
   image-rendering: pixelated;
+}
+
+/* GIF buttons and badges: show the whole sprite instead of cropping it */
+.shot-frame.pixel .screenshot {
+  object-fit: contain;
+  padding: 6px;
+}
+
+.shot-frame .screenshot + .screenshot {
+  border-top: 2px solid #555;
+}
+
+.shot-empty {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  color: #898989;
+}
+
+.shot-name {
+  align-self: start;
+  font-size: 15px;
+  color: #fff;
+}
+
+.screenshot-card .download-button {
+  display: block;
+  margin-top: 0;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* ---------- additions (same palette as above) ---------- */
+
+.button-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.bottom-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tools-button {
+  background-color: #555;
+  border-color: #888;
+}
+
+.tools-button:hover {
+  background-color: #666;
+}
+
+.menu-panel a.menu-divider {
+  border-top: 3px solid #444;
+}
+
+/* Known issues / missing boxes on event pages */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.info-box {
+  background-color: #1f1f1f;
+  border: 2px solid #444;
+  padding: 15px;
+  color: #ccc;
+}
+
+.info-box h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.info-box p,
+.info-box ul {
+  margin: 0 0 10px;
+}
+
+.info-small {
+  font-size: 13px;
+  color: #b0b0b0;
+}
+
+/* Text pages (tools, 404) */
+.prose {
+  max-width: 900px;
+  margin: 0 auto 30px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.prose h1 {
+  margin: 0 0 12px;
+  font-size: 26px;
+  color: #fff;
+}
+
+.prose h2 {
+  margin: 28px 0 10px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.prose h3 {
+  margin: 18px 0 4px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.prose p,
+.prose li {
+  font-size: 15px;
+}
+
+.prose li {
+  margin-bottom: 6px;
+}
+
+.prose a:not([class]) {
+  color: #3da8f5;
+  text-decoration: underline;
+}
+
+.prose .info-box {
+  margin-top: 28px;
+}
+
+.prose .info-box h2 {
+  margin-top: 0;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  font-size: 13px;
+  color: #2aa7a7;
+}
+
+code {
+  background-color: #1f1f1f;
+  border: 1px solid #444;
+  padding: 1px 5px;
+  font-size: 0.9em;
+}
+
+/* One-time pop-up */
+.popup {
+  width: min(560px, calc(100vw - 32px));
+  max-height: calc(100vh - 32px);
+  padding: 0;
+  background-color: #2e2e2e;
+  color: #ccc;
+  border: 3px solid #444;
+  box-shadow: 4px 4px #000;
+  font-family: "Minecraft", sans-serif;
+}
+
+.popup::backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup-body {
+  padding: 20px;
+}
+
+.popup h2 {
+  margin: 0 0 12px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.popup p,
+.popup li {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.popup a:not([class]) {
+  color: #3da8f5;
+  text-decoration: underline;
+}
+
+.popup-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 16px;
 }
